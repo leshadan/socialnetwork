@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+/venv/
+/.idea/
+/static_cdn/
+/bstfriendbook/.env
+*.log
+*.pot
+/bstfriendbook/db.sqlite3
