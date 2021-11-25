@@ -1,0 +1,1 @@
+ Educational project on django social network
