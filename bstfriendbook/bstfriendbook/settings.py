@@ -51,7 +51,25 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-LOGIN_URL = '/admin/'
+# LOGIN_URL = '/admin/'
+LOGIN_REDIRECT_URL = '/posts'
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_UNIQUE = True
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+
+
+#if DEBUG:
+#    EMAIL_BACKEND = 'django.core.mail.backends.dummy.EmailBackend'
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "muzchinskiyeboysbook@gmail.com"
+EMAIL_HOST_PASSWORD = "123sobaka321"
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
